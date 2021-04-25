@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   aws_table_name: "movies-dynamodb-nodejs",
   aws_local_config: {
@@ -5,8 +7,8 @@ module.exports = {
     endpoint: "http://localhost:8000",
   },
   aws_remote_config: {
-    accessKeyId: "AKIATNWZNIZS6QPE45FP",
-    secretAccessKey: "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",
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
     region: "sa-east-1",
   },
 };
